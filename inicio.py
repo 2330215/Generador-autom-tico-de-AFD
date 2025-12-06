@@ -16,7 +16,7 @@ title_font = pygame.font.SysFont(None, 96)
 button_font = pygame.font.SysFont(None, 36)
 
 #rutas de los archivos
-PYTHON_FILE_1 = "pelea.py"
+PYTHON_FILE_1 = "prueba.py"
 PYTHON_FILE_2 = "hola.py"
 PYTHON_FILE_3 = "original.py"
 
@@ -31,7 +31,7 @@ def botones():
     # b1
     boton1 = pygame.Rect(500, 250, 400, 80)
     pygame.draw.rect(win, gray, boton1)
-    win.blit(button_font.render("Modo pelea JcC", True, black), (620, 275))
+    win.blit(button_font.render("Parser", True, black), (620, 275))
     # b2
     boton2 = pygame.Rect(500, 360, 400, 80)
     pygame.draw.rect(win, gray, boton2)
