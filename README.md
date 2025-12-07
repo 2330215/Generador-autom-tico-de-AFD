@@ -14,7 +14,7 @@ Todos los procesos están basados en los fundamentos teóricos de Lenguajes Form
 
 Clona el repositorio:
 
-git clone https://github.com/TU-USUARIO/Proyecto-LyA.git
+git clone https://github.com/2330215/Generador-autom-tico-de-AFD.git
 cd Proyecto-LyA
 
 Instala las dependencias:
