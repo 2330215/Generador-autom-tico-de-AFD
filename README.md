@@ -1,4 +1,4 @@
-# Generador-autom-tico-de-AFD
+# Generador-automatico-de-AFD
 proyecto final de Lenguajes y Automatas
 Proyecto: Herramienta Gráfica para ER → AFND → AFD y Minimización
 
@@ -15,3 +15,4 @@ Conversión de AFND a AFD
 Minimización de AFD
 
 Menú principal para navegar entre las herramientas
+
