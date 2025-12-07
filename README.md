@@ -41,9 +41,13 @@ El tercero es un Parser de expresiones regulares
 **Tecnologías utilizadas**
 
 *Python 3
+
 *Pygame – interfaz gráfica
+
 *pyformlang – parser de expresiones regulares
+
 *automata-lib – minimización de DFA
+
 
 **Algoritmos utilizados**
 
