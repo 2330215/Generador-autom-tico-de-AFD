@@ -77,7 +77,7 @@ class App:
         win.blit(t, (W//2 - t.get_width()//2, y))
         y += 60
 
-        info = fs.render("✓ automata-lib" if AUTOMATA else " pip install automata-lib",
+        info = fs.render(" automata-lib" if AUTOMATA else " pip install automata-lib",
                          True, GREEN if AUTOMATA else RED)
         win.blit(info, (W//2 - info.get_width()//2, y))
         y += 40
@@ -159,7 +159,7 @@ class App:
             f"Inicial: {self.dfa_min.initial_state}",
             f"Finales: {','.join(map(str, sorted(self.dfa_min.final_states)))}",
             f"Total: {len(self.dfa_min.states)}",
-            f"✓ Reducción: {red}" if red > 0 else "✓ Ya minimizado"
+            f"Reducción: {red}" if red > 0 else "Ya minimizado"
         ] + [
             f"δ({e},{s})={d}"
             for e,t in list(self.dfa_min.transitions.items())
