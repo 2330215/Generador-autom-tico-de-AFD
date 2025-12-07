@@ -33,7 +33,9 @@ python inicio.py
 
 Desde ahí podrás acceder a 3 botones:
 El rpimero es para la conversión de ER → AFND → AFD
+
 El segundo es para el manejo de Minimización de AFD
+
 El tercero es un Parser de expresiones regulares
 
 **Tecnologías utilizadas**
@@ -46,7 +48,9 @@ El tercero es un Parser de expresiones regulares
 **Algoritmos utilizados**
 
 Construcción de Thompson
+
 Construcción por subconjuntos
+
 Minimización (table filling / particiones)
 
 **Repositorio utilizado como referencia**
