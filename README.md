@@ -48,3 +48,7 @@ El tercero es un Parser de expresiones regulares
 Construcción de Thompson
 Construcción por subconjuntos
 Minimización (table filling / particiones)
+
+**Repositorio utilizado como referencia**
+
+https://github.com/OJP98/py-finite-automata
