@@ -14,18 +14,21 @@ Todos los procesos están basados en los fundamentos teóricos de Lenguajes Form
 
 Clona el repositorio:
 
+```bash
 git clone https://github.com/2330215/Generador-autom-tico-de-AFD.git
-cd Proyecto-LyA
+```
 
 Instala las dependencias:
-
+```bash
 pip install -r requirements.txt
-
+```
 
 **Ejecución**
 Ejecuta el menú principal:
 
-python src/inicio.py
+```bash
+python inicio.py
+```
 
 Desde ahí podrás acceder a:
 ER → AFND → AFD
