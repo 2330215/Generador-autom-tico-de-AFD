@@ -18,7 +18,7 @@ button_font = pygame.font.SysFont(None, 36)
 #rutas de los archivos
 PYTHON_FILE_1 = "er.py"
 PYTHON_FILE_2 = "hola.py"
-PYTHON_FILE_3 = "original.py"
+PYTHON_FILE_3 = "prueba.py"
 
 # Esto sirve para abrir un archivo de python
 def open_python_file(filepath):
@@ -39,7 +39,7 @@ def botones():
     # b3
     boton3 = pygame.Rect(500, 470, 400, 80)
     pygame.draw.rect(win, gray, boton3)
-    win.blit(button_font.render("Modo original", True, black), (590, 495))
+    win.blit(button_font.render("Parser", True, black), (590, 495))
     #b4
     boton4 = pygame.Rect(500, 580, 400, 80)
     pygame.draw.rect(win, gray, boton4)

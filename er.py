@@ -446,25 +446,29 @@ class App:
             win.blit(surf, (rect.x+10, rect.y+8))
             y += 55
 
-        btn = pygame.Rect(W//2-150, H-120, 280, 50)
+        btn = pygame.Rect(W//2-150, H-60, 280, 50)
         pygame.draw.rect(win, GREEN, btn, border_radius=10)
         win.blit(fl.render("Convertir", True, WHITE), (btn.centerx-60, btn.centery-12))
 
-        btn_dfa = pygame.Rect(W//2-110, H-60, 200, 30)
+        btn_dfa = pygame.Rect(W//2-110, H-5, 200, 30)
         pygame.draw.rect(win, GREEN, btn_dfa, border_radius=10)
         win.blit(fl.render("Convertir a DFA", True, WHITE), (btn_dfa.centerx-80, btn_dfa.centery-12))
-                # Botón MENÚ (inicio)
+        
+        # Botón MENÚ (inicio)
         btn_menu = pygame.Rect(20, 20, 140, 40)
         pygame.draw.rect(win, RED, btn_menu, border_radius=10)
         win.blit(fs.render("MENÚ", True, WHITE), (btn_menu.x+25, btn_menu.y+10))
         self.btn_menu_input = btn_menu
+        
         if self.msg:
             m = fs.render(self.msg, True, RED if "mu mal" in self.msg else GREEN)
             win.blit(m, (W//2 - m.get_width()//2, H-150))
         if self.result:
             m = fl.render(self.result, True, RED if "mu mal" in self.result else GREEN)
             win.blit(m, (W//2 - m.get_width()//2, H-150))
-        return btn
+        
+        return btn, btn_dfa
+    
     def draw_result(self):
         y = 20
 
@@ -513,6 +517,7 @@ class App:
         pygame.draw.rect(win, RED, btn_menu, border_radius=10)
         win.blit(fl.render("MENÚ", True, WHITE), (btn_menu.centerx-45, btn_menu.centery-12))
         return btn_volver, btn_menu
+    
     def event(self, e):
         if e.type == pygame.MOUSEBUTTONDOWN:
             if self.fase == "entrada":
@@ -523,12 +528,16 @@ class App:
                         return
                     y += 90
 
-                if  pygame.Rect(W//2-150, H-120, 280, 50).collidepoint(e.pos):
+                # Detectar clic en botón "Convertir" (coordenadas corregidas)
+                if pygame.Rect(W//2-150, H-60, 280, 50).collidepoint(e.pos):
                     self.interactive_nfa()
                     return
-                if  self.result and pygame.Rect(W//2-120, H-60, 200, 30).collidepoint(e.pos):
+                
+                # Detectar clic en botón "Convertir a DFA" (coordenadas corregidas)
+                if self.result and pygame.Rect(W//2-110, H-5, 200, 30).collidepoint(e.pos):
                     self.fase = "Completopo"
                     return
+                
                 # Botón MENÚ en pantalla inicial
                 if hasattr(self, 'btn_menu_input') and self.btn_menu_input.collidepoint(e.pos):
                     return "hola"
@@ -576,6 +585,7 @@ class App:
             # Escribir
             else:
                 self.inputs[self.activo] += e.unicode
+
 app = App()
 clock = pygame.time.Clock()
 while True:
